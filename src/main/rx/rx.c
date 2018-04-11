@@ -143,6 +143,7 @@ void resetAllRxChannelRangeConfigurations(void)
     }
 }
 
+// TODO: If you increase the version number, remove _padding_0 from rxConfig_t and this line.
 PG_REGISTER_ARRAY_WITH_RESET_FN(rxChannelRangeConfig_t, NON_AUX_CHANNEL_COUNT, rxChannelRangeConfigs, PG_RX_CHANNEL_RANGE_CONFIG, 0);
 
 void pgResetFn_rxChannelRangeConfigs(rxChannelRangeConfig_t *rxChannelRangeConfigs)
